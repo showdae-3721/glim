@@ -64,6 +64,7 @@ BEGIN_MESSAGE_MAP(CGitTestDlg, CDialogEx)
 	ON_WM_SYSCOMMAND()
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
+	ON_BN_CLICKED(IDC_BUTTON_TEST, &CGitTestDlg::OnBnClickedButtonTest)
 END_MESSAGE_MAP()
 
 
@@ -152,3 +153,9 @@ HCURSOR CGitTestDlg::OnQueryDragIcon()
 	return static_cast<HCURSOR>(m_hIcon);
 }
 
+
+
+void CGitTestDlg::OnBnClickedButtonTest()
+{
+	AfxMessageBox(_T("test"));
+}
